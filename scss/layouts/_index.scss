@@ -1,0 +1,55 @@
+.body {
+    background-color: #767ffa;
+    color: #000000;
+}
+.d-block {
+    height: 200px;
+    width: 100%;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.cartas {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.card {
+    margin: 15px;
+}
+.card, img{
+    height: 50%;
+}
+.card, a:link, a:visited, a:active {
+    text-decoration: none;
+    color: #000000;
+    object-fit: cover;
+}
+
+.listas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    place-items: center;
+    font-size: larger;
+    list-style: none;
+    background-color: #cfe6fa;
+    margin-bottom: 20px;
+}
+
+.listas1, .listas2 {
+    list-style: none;
+}

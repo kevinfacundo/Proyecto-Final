@@ -1,0 +1,16 @@
+.footer__ul {
+    list-style: none;
+}
+
+.footer__a {
+    list-style: none;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.footer__a:hover {
+    padding-left: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px #555a55;
+    color: #000000;
+}

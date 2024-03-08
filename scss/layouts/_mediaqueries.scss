@@ -1,0 +1,38 @@
+@media (max-width: 380px) {
+
+    /*     html,
+        .body {
+            width: 100%;
+            overflow-x: hidden;
+    } */
+    
+        a.navbar-brand {
+            display: flex;
+            visibility: collapse;
+            width: 50%;
+            height: 100px;
+        }
+        #carouselExample {
+            display: none;
+        }
+    
+        .carousel.inner {
+            visibility: collapse;
+        }
+        .footer__a {
+            grid-template-columns: repeat(1, 1fr);
+            height: 100%;
+        }
+    
+        .listas {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            height: 100%;
+        }
+    
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+        }
+    
+    }
