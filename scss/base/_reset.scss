@@ -3,3 +3,12 @@
     margin: 0px;
     box-sizing: border-box;
 }
+
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $mainColor;
+    color: #000000;
+    font-family: $mainFont;
+}

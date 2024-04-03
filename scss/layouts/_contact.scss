@@ -2,6 +2,11 @@
     background: linear-gradient(to left, #f061dd, #97027e);
     color: #020202;
 }
+.mapa {
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+}
 
 .articulo1 {
     text-align: center;

@@ -1,15 +1,22 @@
 .body {
     background-color: #767ffa;
     color: #000000;
+    font-family: "Verdana", "Nunito sans";
 }
-.d-block {
-    height: 200px;
-    width: 100%;
-}
-
-.titulo {
+.titulo, h4 {
     display: flex;
     justify-content: center;
+    background: linear-gradient(to bottom, $mainColor, #50a7ee);
+}
+
+.carousel {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to top, $mainColor, #ffffff);
+}
+
+.carousel-item {
+    margin-bottom: 100px;
 }
 
 .cartas {
@@ -21,35 +28,63 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} 
-
-.card {
-    margin: 15px;
-}
-.card, img{
-    height: 50%;
-}
-.card, a:link, a:visited, a:active {
-    text-decoration: none;
-    color: #000000;
-    object-fit: cover;
-}
-
-.listas {
+.box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'a1 a2' 'a3 a4';
     overflow: hidden;
     place-items: center;
-    font-size: larger;
+    font-size: x-large;
     list-style: none;
-    background-color: #cfe6fa;
+    background: linear-gradient(to bottom, #ffffff, $mainColor); 
     margin-bottom: 20px;
+
+    &1,&3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        object-fit: cover;
+        list-style: none;
+    }
+    
+    &2,&4 {
+        display: flex;
+        object-fit: cover;
+    }
+    
+    &1 {
+        grid-area: a1;
+        text-align: right;
+    }
+    
+    &2 {
+        grid-area: a2;
+    }
+    
+    &3 {
+        grid-area: a4;
+    }
+    
+    &4 {
+        grid-area: a3;
+        text-align: left;
+    }
+    
+    & img,
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-lista{
+        list-style: none;
+    }
+
+    &-li{
+        background: linear-gradient(to left, #ffffff, #000000);
+        color: orangered;
+    }
 }
 
-.listas1, .listas2 {
-    list-style: none;
-}

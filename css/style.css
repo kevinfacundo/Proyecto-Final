@@ -4,18 +4,38 @@
   box-sizing: border-box;
 }
 
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #767ffa;
+  color: #000000;
+  font-family: "Verdana", "Nunito sans";
+}
+
 .nav-link:hover {
   background-color: #212529;
   color: #000000;
   border-radius: 100px;
   box-shadow: 1px 1px #555a55;
   padding-top: 10px;
+  font-weight: 500;
+}
+
+.navbar {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #boton {
   background-color: visible;
   backface-visibility: visible;
   background-color: #92f792;
+}
+
+.footer {
+  background-color: #555a55;
+  margin-top: auto;
 }
 
 .footer__ul {
@@ -38,16 +58,23 @@
 .body {
   background-color: #767ffa;
   color: #000000;
+  font-family: "Verdana", "Nunito sans";
 }
 
-.d-block {
-  height: 200px;
-  width: 100%;
-}
-
-.titulo {
+.titulo, h4 {
   display: flex;
   justify-content: center;
+  background: linear-gradient(to bottom, #767ffa, #50a7ee);
+}
+
+.carousel {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, #767ffa, #ffffff);
+}
+
+.carousel-item {
+  margin-bottom: 100px;
 }
 
 .cartas {
@@ -59,39 +86,54 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
-  margin: 15px;
-}
-
-.card, img {
-  height: 50%;
-}
-
-.card, a:link, a:visited, a:active {
-  text-decoration: none;
-  color: #000000;
-  object-fit: cover;
-}
-
-.listas {
+.box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "a1 a2" "a3 a4";
   overflow: hidden;
   place-items: center;
-  font-size: larger;
+  font-size: x-large;
   list-style: none;
-  background-color: #cfe6fa;
+  background: linear-gradient(to bottom, #ffffff, #767ffa);
   margin-bottom: 20px;
 }
-
-.listas1, .listas2 {
+.box1, .box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: cover;
   list-style: none;
+}
+.box2, .box4 {
+  display: flex;
+  object-fit: cover;
+}
+.box1 {
+  grid-area: a1;
+  text-align: right;
+}
+.box2 {
+  grid-area: a2;
+}
+.box3 {
+  grid-area: a4;
+}
+.box4 {
+  grid-area: a3;
+  text-align: left;
+}
+.box img, .box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.box-lista {
+  list-style: none;
+}
+.box-li {
+  background: linear-gradient(to left, #ffffff, #000000);
+  color: orangered;
 }
 
 .nosotros {
@@ -109,6 +151,12 @@
 .contacto {
   background: linear-gradient(to left, #f061dd, #97027e);
   color: #020202;
+}
+
+.mapa {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
 }
 
 .articulo1 {
@@ -130,24 +178,37 @@
   background-color: #92f792;
 }
 
+.bodyGallery {
+  background-color: #4d5fac;
+  display: grid;
+  grid: 100vh;
+}
+
 .card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card {
   margin: 15px;
+  box-shadow: 5px 5px 40px -0.1px #4450fa;
+  margin-bottom: 10px;
 }
 
-.card, img {
-  height: 50%;
+.carta {
+  display: flex;
+  justify-content: center;
 }
 
-.card, a:link, a:visited, a:active {
+.card,
+img {
+  height: 60%;
+}
+
+.card,
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
   color: #000000;
   object-fit: cover;
+  width: 100%;
 }
 
 .cards {
@@ -174,7 +235,7 @@ a:active {
   text-align: center;
   background-size: cover;
   color: #000000;
-  background: linear-gradient(to right, #ff9900, #ff0000);
+  background: linear-gradient(to bottom, #767ffa, #ff0000);
 }
 
 .videos {
@@ -182,9 +243,7 @@ a:active {
   justify-content: center;
   margin: 10px;
   padding: 10px;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @media (max-width: 380px) {
@@ -203,7 +262,8 @@ a:active {
     display: none;
   }
   .carousel.inner {
-    visibility: collapse;
+    width: 100%;
+    height: 100vh;
   }
   .footer__a {
     grid-template-columns: repeat(1, 1fr);
